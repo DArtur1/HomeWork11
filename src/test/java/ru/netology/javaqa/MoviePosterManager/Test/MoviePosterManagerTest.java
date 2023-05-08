@@ -1,4 +1,5 @@
 package ru.netology.javaqa.MoviePosterManager.Test;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.netology.javaqa.MovieItem.MovieItem;
@@ -21,7 +22,7 @@ public class MoviePosterManagerTest {
 //    MoviePosterManager movieM = new MoviePosterManager(12);
 
     @Test
-    public void FindAllMoveStandartAfisha(){
+    public void FindAllMoveStandartAfisha() {
         MoviePosterManager movieM = new MoviePosterManager(12);
         movieM.addNew(item1);
         movieM.addNew(item2);
@@ -29,14 +30,14 @@ public class MoviePosterManagerTest {
         movieM.addNew(item4);
         movieM.addNew(item5);
 
-        MovieItem [] expected = {item1, item2, item3, item4, item5};
-        MovieItem [] actual = movieM.findAll();
+        MovieItem[] expected = {item1, item2, item3, item4, item5};
+        MovieItem[] actual = movieM.findAll();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void addNewFilm (){
+    public void addNewFilm() {
         MoviePosterManager movieM = new MoviePosterManager();
         movieM.addNew(item1);
         movieM.addNew(item2);
@@ -46,13 +47,13 @@ public class MoviePosterManagerTest {
         movieM.addNew(item6);
         movieM.addNew(item7);
 
-        MovieItem [] expected = {item1, item2, item3, item4, item5, item6, item7};
-        MovieItem [] actual = movieM.findAll();
+        MovieItem[] expected = {item1, item2, item3, item4, item5, item6, item7};
+        MovieItem[] actual = movieM.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void findLastFilmsOverLimit(){
+    public void findLastFilmsOverLimit() {
         MoviePosterManager movieM = new MoviePosterManager(5);
         movieM.addNew(item1);
         movieM.addNew(item2);
@@ -67,8 +68,8 @@ public class MoviePosterManagerTest {
         movieM.addNew(item11);
         movieM.addNew(item12);
 
-        MovieItem [] expected = {item12, item11, item10, item9, item8};
-        MovieItem [] actual = movieM.findLast();
+        MovieItem[] expected = {item12, item11, item10, item9, item8};
+        MovieItem[] actual = movieM.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }

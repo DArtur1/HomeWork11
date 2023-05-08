@@ -1,9 +1,10 @@
 package ru.netology.javaqa.MovieItem;
+
 public class MovieItem {
     private int id;
     private String filmName;
 
-    public MovieItem(int id, String filmName){
+    public MovieItem(int id, String filmName) {
         this.id = id;
         this.filmName = filmName;
     }
